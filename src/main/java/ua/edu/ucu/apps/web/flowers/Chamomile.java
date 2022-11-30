@@ -8,7 +8,7 @@ public class Chamomile extends Flower {
     public Chamomile(){
         super();
     }
-    public Chamomile(FlowerColor color, int price, int sepalLength) {
+    public Chamomile(String color, int price, int sepalLength) {
         super(color, price, sepalLength);
     }
 }

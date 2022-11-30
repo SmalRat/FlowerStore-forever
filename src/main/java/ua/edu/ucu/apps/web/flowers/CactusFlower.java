@@ -8,7 +8,7 @@ public class CactusFlower extends Flower {
     public CactusFlower(){
         super();
     }
-    public CactusFlower(FlowerColor color, int price, int sepalLength) {
+    public CactusFlower(String color, int price, int sepalLength) {
         super(color, price, sepalLength);
     }
 }

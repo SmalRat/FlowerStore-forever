@@ -8,7 +8,7 @@ public class Tulip extends Flower {
     public Tulip(){
         super();
     }
-    public Tulip(FlowerColor color, int price, int sepalLength) {
+    public Tulip(String color, int price, int sepalLength) {
         super(color, price, sepalLength);
     }
 }

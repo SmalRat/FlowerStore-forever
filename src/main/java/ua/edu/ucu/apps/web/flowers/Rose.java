@@ -8,7 +8,7 @@ public class Rose extends Flower {
     public Rose(){
         super();
     }
-    public Rose(FlowerColor color, int price, int sepalLength) {
+    public Rose(String color, int price, int sepalLength) {
         super(color, price, sepalLength);
     }
 }

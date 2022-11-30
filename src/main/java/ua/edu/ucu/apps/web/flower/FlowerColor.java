@@ -4,7 +4,7 @@ public enum FlowerColor {
     /**
      * Flower colors.
      */
-    RED("#FF0000"), BLUE("#0000FF");
+    RED("#FF0000"), BLUE("#0000FF"), ORANGE("#FF9300"), GREEN("2EFF00");
     private final String stringRepresentation;
 
     FlowerColor(final String stringRepr) {

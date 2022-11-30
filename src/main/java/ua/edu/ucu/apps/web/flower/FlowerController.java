@@ -1,12 +1,12 @@
 package ua.edu.ucu.apps.web.flower;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
-@RequestMapping(path = "/flower")
+@RequestMapping
 public class FlowerController {
     private final FlowerService flowerService;
 
@@ -15,8 +15,18 @@ public class FlowerController {
         this.flowerService = flowerService;
     }
 
-    @GetMapping
-    public Flower getFlowers(){
+    @GetMapping(path = "/flower")
+    public Flower getFlower(){
         return flowerService.getFlowerExample();
+    }
+
+    @GetMapping("/flowers")
+    public List<Flower> getFlowers(){
+        return flowerService.getFlowers();
+    }
+
+    @PostMapping("/flowers")
+    public void addFlower(@RequestBody Flower flower){
+        flowerService.addFlower(flower);
     }
 }

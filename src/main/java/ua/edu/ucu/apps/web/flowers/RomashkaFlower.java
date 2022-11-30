@@ -8,7 +8,7 @@ public class RomashkaFlower extends Flower {
     public RomashkaFlower(){
         super();
     }
-    public RomashkaFlower(FlowerColor color, int price, int sepalLength) {
+    public RomashkaFlower(String color, int price, int sepalLength) {
         super(color, price, sepalLength);
     }
 }

@@ -1,13 +1,26 @@
 package ua.edu.ucu.apps.web.flower;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ua.edu.ucu.apps.web.items.Item;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Setter
 @Getter
-public class Flower {
+@AllArgsConstructor
+@NoArgsConstructor
+@Table
+@Entity
+public class Flower extends Item {
+    @Id @GeneratedValue
+    private int id;
     private final String name = "Flower";
     /**
      * Flower class
@@ -16,7 +29,7 @@ public class Flower {
     /**
      * Sepal length
      */
-    private FlowerColor color;
+    private String color;
 
     /**
      * Color of the flower
@@ -25,21 +38,7 @@ public class Flower {
     /**
      * The price of flower
      */
-    /*@Getter
-    private FlowerType flowerType;
-    /**
-     * Type of flower
-     */
-    public final String getColor() {
-        /**
-         * returns color (string)
-         */
-        return color.toString();
-    }
-    public Flower(){
-
-    }
-    public Flower(FlowerColor color, int price, int sepalLength){
+    public Flower(String color, int price, int sepalLength){
         this.color = color;
         this.price = price;
         this.sepalLength = sepalLength;
@@ -47,5 +46,10 @@ public class Flower {
     @Override
     public String toString(){
         return name;
+    }
+
+    @Override
+    public double price() {
+        return price;
     }
 }

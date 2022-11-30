@@ -11,17 +11,12 @@ import ua.edu.ucu.apps.web.flower.FlowerColor;
 
 import java.util.List;
 
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+@SpringBootApplication
 @RestController
 public class FlowerStoreApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FlowerStoreApplication.class, args);
-	}
-
-	@GetMapping("/flowers")
-	public List<Flower> getFlowers(){
-		return List.of(new Flower(FlowerColor.BLUE, 50, 100), new Flower(FlowerColor.BLUE, 40, 80), new Flower(FlowerColor.RED, 60, 120));
 	}
 
 	@GetMapping("/test")
